@@ -34,4 +34,18 @@ public class StringAccumulatorTest {
         Assert.assertEquals(stringAccumulator.add("1\n\n\n2,3"),6
         );
     }
+
+    @Test
+    public void testFour() throws AccumulatorException{
+        StringAccumulator stringAccumulator = new StringAccumulator();
+        Assert.assertEquals(stringAccumulator.add("//***\n1***2***3"),6
+        );
+    }
+
+    @Test
+    public void testFive() throws AccumulatorException{
+        StringAccumulator stringAccumulator = new StringAccumulator();
+        Assert.assertEquals(stringAccumulator.add("//*|%\n1*2%3"),6
+        );
+    }
 }
