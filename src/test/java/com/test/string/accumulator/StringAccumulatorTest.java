@@ -79,4 +79,11 @@ public class StringAccumulatorTest {
         }
     }
 
+    @Test
+    public void testTen() throws AccumulatorException{
+        StringAccumulator stringAccumulator = new StringAccumulator();
+        Assert.assertEquals(stringAccumulator.add("1,1,1,1,1,1,1,1,1,,1"),10
+        );
+    }
+
 }
